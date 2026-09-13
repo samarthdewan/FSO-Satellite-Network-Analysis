@@ -61,23 +61,6 @@ The `models` folder contains:
 - `weibullParameters.m`: exponentiated-Weibull parameters α, β, and η using Equations (25)–(29) in [1];
 - `outageProbability.m`: optical-link outage probability using Equations (38) and (39) in [1].
 
-## Repository Structure
-
-```text
-FSO-Satellite-Network-Analysis/
-├── main.m
-├── parameters.m
-├── models/
-├── simulations/
-│   ├── powerVsDistance.m
-│   └── outageVsSNR.m
-├── figures/
-├── results/
-├── README.md
-├── LICENSE
-└── .gitignore
-```
-
 ## Requirements
 
 - MATLAB R2020a or later
@@ -108,32 +91,32 @@ results/outage_at_30dB.csv
 
 Unless identified as an assumption, the following parameters are taken from [1].
 
-| Parameter | Value | Reference / basis |
-|---|---:|---|
-| Wavelength | 1550 nm | [1, Table 6] |
-| Optical efficiencies | 0.8 | [1, Table 6] |
-| Receiver telescope diameter | 80 mm | [1, Table 6] |
-| Pointing errors | 1 μrad | [1, Table 6] |
-| Full transmitter divergence angle | 15 μrad | [1, Section V-B] |
-| Receiver sensitivity | -35.5 dBm | [1, Table 6] |
-| ISL link margin | 3 dB | [1, Section V-B] |
-| Ground-station altitude | 0.1 km | [1, Table 6] |
-| Satellite altitude | 550 km | [1, Section IV-A1] |
-| Troposphere height | 20 km | [1, Table 6] |
-| Elevation angle | 30° | [1, Table 6] |
-| SNR threshold | 7 dB | [1, Table 6] |
-| RMS wind-speed parameter | 21 m/s | Hufnagel–Valley assumption based on [2] |
+| Parameter                                 |                                   Value | Reference                               |
+| ----------------------------------------- | --------------------------------------: | --------------------------------------- |
+| Wavelength                                |                                 1550 nm | [1, Table 6]                            |
+| Optical efficiencies                      |                                     0.8 | [1, Table 6]                            |
+| Receiver telescope diameter               |                                   80 mm | [1, Table 6]                            |
+| Pointing errors                           |                                  1 μrad | [1, Table 6]                            |
+| Full transmitter divergence angle         |                                 15 μrad | [1, Section V-B]                        |
+| Receiver sensitivity                      |                               -35.5 dBm | [1, Table 6]                            |
+| ISL link margin                           |                                    3 dB | [1, Section V-B]                        |
+| Ground-station altitude                   |                                  0.1 km | [1, Table 6]                            |
+| Satellite altitude                        |                                  550 km | [1, Section IV-A1]                      |
+| Troposphere height                        |                                   20 km | [1, Table 6]                            |
+| Elevation angle                           |                                     30° | [1, Table 6]                            |
+| SNR threshold                             |                                    7 dB | [1, Table 6]                            |
+| RMS wind-speed parameter                  |                                  21 m/s | Hufnagel–Valley assumption based on [2] |
 | Ground-level C<sub>n</sub><sup>2</sup>(0) | 1.7 × 10<sup>-14</sup> m<sup>-2/3</sup> | Hufnagel–Valley assumption based on [2] |
 
 ## Cloud Conditions
 
 The cloud parameters are taken from [1, Table 6].
 
-| Condition | Cloud concentration | Liquid water content |
-|---|---:|---:|
-| Thin cirrus | 0.5 cm<sup>-3</sup> | 3.128 × 10<sup>-4</sup> g/m<sup>3</sup> |
-| Cirrus | 0.025 cm<sup>-3</sup> | 0.06405 g/m<sup>3</sup> |
-| Cumulus | 250 cm<sup>-3</sup> | 1.0 g/m<sup>3</sup> |
+| Condition   |   Cloud concentration |                    Liquid water content |
+| ----------- | --------------------: | --------------------------------------: |
+| Thin cirrus |   0.5 cm<sup>-3</sup> | 3.128 × 10<sup>-4</sup> g/m<sup>3</sup> |
+| Cirrus      | 0.025 cm<sup>-3</sup> |                 0.06405 g/m<sup>3</sup> |
+| Cumulus     |   250 cm<sup>-3</sup> |                     1.0 g/m<sup>3</sup> |
 
 ## Assumptions and Limitations
 
@@ -161,13 +144,13 @@ The following constellation-dependent components are outside the current scope:
 
 At a 30° elevation angle using the baseline turbulence assumptions, the model produces:
 
-| Quantity | Approximate value |
-|---|---:|
-| Rytov variance | 0.19915 |
-| Scintillation index | 0.21578 |
-| Weibull α | 2.92504 |
-| Weibull β | 2.99577 |
-| Weibull η | 0.85728 |
+| Quantity            | Approximate value |
+| ------------------- | ----------------: |
+| Rytov variance      |           0.19915 |
+| Scintillation index |           0.21578 |
+| Weibull α           |           2.92504 |
+| Weibull β           |           2.99577 |
+| Weibull η           |           0.85728 |
 
 The results also satisfy the expected qualitative checks:
 
