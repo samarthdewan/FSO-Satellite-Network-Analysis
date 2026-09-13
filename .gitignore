@@ -1,0 +1,34 @@
+# MATLAB backup and temporary files
+*.asv
+*.m~
+*.autosave
+*.mlx.autosave
+
+# MATLAB generated folders
+slprj/
+codegen/
+
+# Compiled MATLAB MEX files
+*.mexw64
+*.mexa64
+*.mexmaci64
+
+# Editor settings
+.vscode/
+.idea/
+
+# Windows and macOS system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# General temporary files
+*.tmp
+*.temp
+~$*
+
+# Local copy of the source research paper
+/Free-Space_Optical_FSO_Satellite_Networks_Performance_Analysis_Transmission_Power_Latency_and_Outage_Probability.pdf
+
+# Screenshot taken from the source paper
+/simulation_parameters.png
